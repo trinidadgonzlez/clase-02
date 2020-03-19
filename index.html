@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap');
+     html, body {
+     margin: 0;
+     padding: 0;
+    font-family: 'Baloo Chettan 2', cursive;
+    }
+  h1{
+    padding: 0 4%;
+    }
+ canvas {display: block;
+    }
+
+    </style>
+    <title>MI SEGUNDA PÁGINA</title>
+  </head>
+
+  <body>
+      <h1>                      </h1>
+      <script>
+       var a = 20;
+       var b= 40 ;
+       var c;
+       var nombres = {
+        estudiantes:[ "Trinidad González"],
+        profesor: "Felipe Cortez"
+      }
+      function setup() {
+        createCanvas(windowWidth, windowHeight).position(0, 0).style('z-index', -1);
+        document.getElementsByTagName("h1")[0].append(nombres.estudiantes + " en cuarentena");
+        console.log("odio las clases online");
+      }
+
+        function draw() {
+            colorMode(HSB, 190, 100, 90);
+            fill(random(b-40, b), 100, 100);
+            noStroke();
+            c = a * random(1, 5);
+            ellipse(mouseX, mouseY, c, c);
+    }
+    function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+    }
+    function mouseClicked() {
+        if (b === 40) {
+            b = 180;
+        }else {
+         b = 40;
+        }
+      }
+
+
+
+      </script>
+  </body>
+</html>
